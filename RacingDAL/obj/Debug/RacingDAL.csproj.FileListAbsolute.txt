@@ -1,0 +1,13 @@
+D:\Education\A-Level\Racing_research\RacingDAL\bin\Debug\RacingDAL.dll.config
+D:\Education\A-Level\Racing_research\RacingDAL\bin\Debug\RacingDAL.dll
+D:\Education\A-Level\Racing_research\RacingDAL\bin\Debug\RacingDAL.pdb
+D:\Education\A-Level\Racing_research\RacingDAL\bin\Debug\EntityFramework.dll
+D:\Education\A-Level\Racing_research\RacingDAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Education\A-Level\Racing_research\RacingDAL\bin\Debug\EntityFramework.xml
+D:\Education\A-Level\Racing_research\RacingDAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Education\A-Level\Racing_research\RacingDAL\obj\Debug\RacingDAL.csprojAssemblyReference.cache
+D:\Education\A-Level\Racing_research\RacingDAL\obj\Debug\RacingDAL.csproj.CopyComplete
+D:\Education\A-Level\Racing_research\RacingDAL\obj\Debug\RacingDAL.dll
+D:\Education\A-Level\Racing_research\RacingDAL\obj\Debug\RacingDAL.pdb
+D:\Education\A-Level\Racing_research\RacingDAL\obj\Debug\RacingDAL.Migrations.initialDB.resources
+D:\Education\A-Level\Racing_research\RacingDAL\obj\Debug\RacingDAL.csproj.GenerateResource.cache
