@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace RacingDAL.Interfaces
 {
-    public interface IGeneralDBRepository<TEntity> where TEntity : class
+    public interface IGeneralDBRepository<TEntity> where TEntity : class, IEntity
     {
-            void Create(TEntity item);
-            TEntity FindById(int id);
-            IEnumerable<TEntity> Get();
-            IEnumerable<TEntity> Get(Func<TEntity, bool> predicate);
+            Task CreateAsync(TEntity item);
+            Task<TEntity> FindByIdAsync(int id);
+            Task<IEnumerable<TEntity>> GetAllAsync();
+            IEnumerable<TEntity> GetAllAsync(Func<TEntity, bool> predicate);
             void Remove(TEntity item);
-            void Update(TEntity item);
+            Task UpdateAsync(TEntity item);
     }
 }

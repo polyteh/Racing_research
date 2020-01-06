@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RacingDAL", "RacingDAL\Raci
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleDALTests", "ConsoleTests\ConsoleDALTests.csproj", "{AE22F2EE-2063-44BF-8329-38A661E8DADB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RacingDTO", "RacingDTO\RacingDTO.csproj", "{80C164F9-51F9-483E-9C45-5607140572AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RacingWeb", "RacingWeb\RacingWeb.csproj", "{13ECA016-91DB-4D39-A58A-FA12ACA9EF51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{AE22F2EE-2063-44BF-8329-38A661E8DADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE22F2EE-2063-44BF-8329-38A661E8DADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE22F2EE-2063-44BF-8329-38A661E8DADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80C164F9-51F9-483E-9C45-5607140572AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80C164F9-51F9-483E-9C45-5607140572AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80C164F9-51F9-483E-9C45-5607140572AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80C164F9-51F9-483E-9C45-5607140572AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13ECA016-91DB-4D39-A58A-FA12ACA9EF51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13ECA016-91DB-4D39-A58A-FA12ACA9EF51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13ECA016-91DB-4D39-A58A-FA12ACA9EF51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13ECA016-91DB-4D39-A58A-FA12ACA9EF51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

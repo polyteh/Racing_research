@@ -1,4 +1,5 @@
-﻿using RacingDAL.Interfaces;
+﻿using Ninject;
+using RacingDAL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -9,32 +10,34 @@ using System.Threading.Tasks;
 // generic repository for the CRUD function for Engine, Brake and Suspention
 namespace RacingDAL
 {
-    public class GenericRacingRepository<TEntity> : IGeneralDBRepository<TEntity> where TEntity : class
+    public class GenericRacingRepository<TEntity> : IGeneralDBRepository<TEntity> where TEntity : class, IEntity
     {
         DbContext _context;
         DbSet<TEntity> _dbSet;
+        [Inject]
         public GenericRacingRepository(DbContext context)
         {
             _context = context;
             _dbSet = context.Set<TEntity>();
         }
-        public void Create(TEntity item)
+        public async Task CreateAsync(TEntity item)
         {
             _dbSet.Add(item);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
 
-        public TEntity FindById(int id)
+        public async Task<TEntity> FindByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var itemBuId = await _dbSet.SingleOrDefaultAsync<TEntity>(e=>e.Id==id);
+            return itemBuId;
         }
 
-        public IEnumerable<TEntity> Get()
+        public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
-            return _dbSet.AsNoTracking().ToList();
+            return await _dbSet.ToListAsync();
         }
 
-        public IEnumerable<TEntity> Get(Func<TEntity, bool> predicate)
+        public IEnumerable<TEntity> GetAllAsync(Func<TEntity, bool> predicate)
         {
             throw new NotImplementedException();
         }
@@ -44,9 +47,14 @@ namespace RacingDAL
             throw new NotImplementedException();
         }
 
-        public void Update(TEntity item)
+        public async Task UpdateAsync(TEntity item)
         {
-            throw new NotImplementedException();
+            var itemBuId = _dbSet.SingleOrDefault(e => e.Id == item.Id);
+            if (itemBuId!=null)
+            {
+                _context.Entry<TEntity>(itemBuId).CurrentValues.SetValues(item);
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

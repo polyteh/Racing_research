@@ -12,3 +12,5 @@ D:\Education\A-Level\Racing_research\ConsoleTests\obj\Debug\ConsoleDALTests.cspr
 D:\Education\A-Level\Racing_research\ConsoleTests\obj\Debug\ConsoleDALTests.csproj.CopyComplete
 D:\Education\A-Level\Racing_research\ConsoleTests\obj\Debug\ConsoleTests.exe
 D:\Education\A-Level\Racing_research\ConsoleTests\obj\Debug\ConsoleTests.pdb
+D:\Education\A-Level\Racing_research\ConsoleTests\bin\Debug\Ninject.dll
+D:\Education\A-Level\Racing_research\ConsoleTests\bin\Debug\Ninject.xml

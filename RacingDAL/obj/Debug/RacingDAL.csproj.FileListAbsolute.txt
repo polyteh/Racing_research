@@ -11,3 +11,5 @@ D:\Education\A-Level\Racing_research\RacingDAL\obj\Debug\RacingDAL.dll
 D:\Education\A-Level\Racing_research\RacingDAL\obj\Debug\RacingDAL.pdb
 D:\Education\A-Level\Racing_research\RacingDAL\obj\Debug\RacingDAL.Migrations.initialDB.resources
 D:\Education\A-Level\Racing_research\RacingDAL\obj\Debug\RacingDAL.csproj.GenerateResource.cache
+D:\Education\A-Level\Racing_research\RacingDAL\bin\Debug\Ninject.dll
+D:\Education\A-Level\Racing_research\RacingDAL\bin\Debug\Ninject.xml
