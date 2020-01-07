@@ -18,16 +18,14 @@ namespace RacingWeb.Configuration
         public override void Load()
         {
             this.Bind<IEngineService>().To<EngineService>();
+            this.Bind<IBrakeService>().To<BrakeService>();
+            this.Bind<IRacingCarService>().To<RacingCarService>();
             var mapperConfiguration = CreateConfiguration();
             this.Bind<MapperConfiguration>().ToConstant(mapperConfiguration).InSingletonScope();
             this.Bind<IMapper>().ToMethod(ctx => new Mapper(mapperConfiguration, type => ctx.Kernel.Get(type)));
         }
-        //private MapperConfiguration CreateConfiguration()
-        //{
-        //    var config = new MapperConfiguration(cfg => new WebAutomapperProfile());
-        //    return config;
 
-        //}
+        //create common mapper configuration
         private MapperConfiguration CreateConfiguration()
         {
             // var config = new MapperConfiguration(cfg => new DTOAutomapperProfile());

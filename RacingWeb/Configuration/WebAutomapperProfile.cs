@@ -12,6 +12,8 @@ namespace RacingWeb.Configuration
         public WebAutomapperProfile()
         {
             CreateMap<EngineView, EngineDTO>().ReverseMap();
+            CreateMap<BrakeView, BrakeDTO>().ReverseMap();
+            CreateMap<RacingCarView, RacingCarDTO>().ReverseMap();
         }
     }
 }

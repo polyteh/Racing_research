@@ -14,11 +14,13 @@ namespace RacingWeb.Configuration
     {
         public static void Configure()
         {
+            //combine modules from DTO and web layers
             var modules = new INinjectModule[]
                 {
                     new WebNinjectConfiguration(),
                     new DTONinjectConfiguration()
                };
+            //make new kernel with ctor
             var kernel = new StandardKernel(modules);
             // suppress NinjectModelvalidator for MVC
             kernel.Unbind<ModelValidatorProvider>();

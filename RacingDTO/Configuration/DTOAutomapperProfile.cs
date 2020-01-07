@@ -13,7 +13,9 @@ namespace RacingDTO.Configuration
     {
         public DTOAutomapperProfile()
         {
-            CreateMap<Engine, EngineDTO>().ReverseMap();           
+            CreateMap<Engine, EngineDTO>().ReverseMap();
+            CreateMap<Brake,BrakeDTO>().ReverseMap();
+            CreateMap<RacingCar, RacingCarDTO>().ReverseMap();
         }
     }
 }

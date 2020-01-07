@@ -12,27 +12,27 @@ namespace RacingDAL
 {
     public class GenericRacingRepository<TEntity> : IGeneralDBRepository<TEntity> where TEntity : class, IEntity
     {
-        DbContext _context;
-        DbSet<TEntity> _dbSet;
+        protected DbContext _context;
+        protected DbSet<TEntity> _dbSet;
         [Inject]
         public GenericRacingRepository(DbContext context)
         {
             _context = context;
             _dbSet = context.Set<TEntity>();
         }
-        public async Task CreateAsync(TEntity item)
+        public virtual async Task CreateAsync(TEntity item)
         {
             _dbSet.Add(item);
             await _context.SaveChangesAsync();
         }
 
-        public async Task<TEntity> FindByIdAsync(int id)
+        public virtual async Task<TEntity> FindByIdAsync(int id)
         {
             var itemBuId = await _dbSet.SingleOrDefaultAsync<TEntity>(e=>e.Id==id);
             return itemBuId;
         }
 
-        public async Task<IEnumerable<TEntity>> GetAllAsync()
+        public virtual async Task<IEnumerable<TEntity>> GetAllAsync()
         {
             return await _dbSet.ToListAsync();
         }
@@ -47,7 +47,7 @@ namespace RacingDAL
             throw new NotImplementedException();
         }
 
-        public async Task UpdateAsync(TEntity item)
+        public virtual async Task UpdateAsync(TEntity item)
         {
             var itemBuId = _dbSet.SingleOrDefault(e => e.Id == item.Id);
             if (itemBuId!=null)
